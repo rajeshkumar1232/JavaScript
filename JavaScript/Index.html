@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>javaScript CheatCode </title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<!--<script type="text/javascript" src="main.js"></script>-->
+	</head>
+
+	<body id="body">
+		<div class="header">
+			<h1 id="heading"> JavaScript </h1>
+			<p> with Brad </p>
+		</div>
+		
+<!-- 		<div class="container">
+			<button onclick='doclick()'> on click</button>
+		<div> -->
+<!-- 		<div class="container">
+			<button onclick="this.innerHTML='U clicked'"> on click</button>
+		<div> -->
+
+<!-- 		<div class="container">
+			<button onclick="changetext(this)"> on click</button>
+		<div> -->
+
+		<form method="post" action="something.html" name="myForm" onsubmit=" return validateForm()">
+			<div>
+				<label>First name</label>
+				<input type="text" name="firstName">
+			</div>
+			<div>
+				<label>Last name</label>
+				<input type="text" name="lastName">
+			</div>
+			<div>
+				<label>Select background</label>
+				<select name="background" id="background" 
+				onchange="changeBackground(this)">	
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+					<option value="green">Green</option>
+				</select>
+			</div>
+			<input type="submit" name="submit">
+		</form>	
+
+		<div class="container">
+			<h1 id='time'></h1>
+			<button onclick="showDate()"> ShowDate</button>
+		<div>
+		<script type="text/javascript">
+
+			function validateForm(){
+				var firstName = document.forms["myForm"]["firstName"].value;
+				alert(firstName);
+
+				if(firstName == null || firstName ==""){
+					alert("first name us required");
+					return false;
+				}
+			}
+
+
+
+
+
+			function changeBackground(x){
+				console.log('Hello '+x.value);
+				var body = document.getElementById('heading');
+				//body.style.background=x.value;
+				body.style.color=x.value;
+			}
+			function doclick(){
+				alert("you cliked");
+			}
+			function changetext1(id){
+				id.innerHTML = 'youClicked';
+			}
+			function changetext(){
+				var heading = document.getElementById('heading');
+				heading.innerHTML = 'you Clicked';
+			}
+			function showDate(){
+				var time = document.getElementById('time');
+				time.innerHTML = Date();
+			}
+
+
+			//<!--alert("script tag");-->
+			//number  letter nuber underscore dollersign
+			//begin with letter or _ or $
+			//case sensative
+
+			//var number1=23;
+			//var number2=23;
+			//alert(number1+number2);
+			//string
+			//array
+				//var myArray=['red','black'];
+				// var myArray = new Array('red','black');
+				// myArray.push('purple');
+			// 	var myArray =[4,5,32,1];
+			// alert(myArray.sort());
+			//object
+
+			//loop
+			// for (var i = 0 ; i < 10; i++) {
+			// 	console.log(i)		
+			// }
+
+			// var i = 5;
+			// while(i < 10){
+			// 	console.log(i);
+			// 	i++;	
+			// }
+
+			// var number = [10,53,32,41,12];
+			// number.forEach(function(number){
+			// 	console.log(number);
+			// });
+
+
+				// for (var i = 0; i < number.length; i++) {
+				// 	console.log(number[i]);
+				// }
+
+
+
+			// condition
+			var var1=3;
+			var var2=5;
+			// if(var1 != var2 && var1==3 ){
+			// 	console.log("this is true");
+			// }else{
+			// 	console.log("this is false");
+			// }
+
+			// if(var1 != var2 || var1==4 ){
+			// 	console.log("this is true");
+			// }else{
+			// 	console.log("this is false");
+			// }
+
+			// var alpha = 'b';
+
+			// switch(alpha){
+			// 	case "a":
+			// 	alert("this is a");
+			// 	break;
+			// 	case "b":
+			// 	alert("this b");
+			// 	break;
+			// 	default:
+			// 	alert("thi is default");
+			// 	break;
+			// }
+		//object litral	
+
+			// var person = {
+			// 	firstName:'brad',
+			// 	lastName:'kumar',
+			// 	age: 34,
+			// 	children:['gutu1','gutu2'],
+			// 	address:{
+			// 		state:'karnataka',
+			// 		region:'bangalore'
+			// 	},
+			// 	fullname: function(){
+			// 		return this.firstName+" "+this.lastName;
+			// 	}
+
+
+			// }
+			// //console.log(person.children[1]);
+			// console.log(person.fullname());
+
+
+		//object constructor	
+			// var apple = new Object();
+			// apple.color = 'red';
+			// apple.shape = 'round';
+
+			// apple.describe = function(){
+			// 	return 'an apple of colr '+this.color+' and shape is '+this.shape;
+			// }
+			// console.log(apple.describe());
+
+		//constructor pattern
+			// function fruit(name, color, shape){
+			// 	this.name=name;
+			// 	this.color=color;
+			// 	this.shape=shape;
+
+
+			// 	this.describe =  function(){
+			// 		return 'nameof fruit is'+this.name+'  and color is '+this.color+' and sixe is like'+this.shape;
+			// 	}				
+			// }
+
+			// //var apple = new fruit('apple','green','round');
+			// var ciku = new fruit('ciku','brown','oval');
+			// console.log(ciku.color);
+			// console.log(ciku.describe());
+
+		//Object array	
+			// var user = [
+			// 	{
+			// 		name:'A',
+			// 		age:10,
+			// 	},
+			// 	{
+			// 		name:'B',
+			// 		age:20,
+			// 	},
+			// 	{
+			// 		name:'C',
+			// 		age:30,
+			// 	},
+			// 	{
+			// 		name:'D',
+			// 		age:40,
+			// 	}
+			// ];
+
+			// console.log(user[1].name);
+
+	//EVENT
+			
+
+		</script>
+	</body>
+</html>		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
